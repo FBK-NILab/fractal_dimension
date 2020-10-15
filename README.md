@@ -22,8 +22,8 @@ brainlife.io is publicly funded and for the sustainability of the project it is 
 [![NIH-NIBIB-R01EB029272](https://img.shields.io/badge/NIH_NIBIB-R01EB029272-green.svg)](https://grantome.com/grant/NIH/R01-EB029272-01)
 
 ### Reference
-- https://en.wikipedia.org/wiki/Fractal_dimension
-- https://en.wikipedia.org/wiki/Minkowski-Bouligand_dimension
+- [Fractal Dimension](https://en.wikipedia.org/wiki/Fractal_dimension)
+- [Box-counting dimension](https://en.wikipedia.org/wiki/Minkowski-Bouligand_dimension)
 
 ### Citations
 We kindly ask that you cite the following articles when publishing papers and code using this code. 
@@ -41,16 +41,10 @@ We kindly ask that you cite the following articles when publishing papers and co
 You can submit this App online at https://doi.org/10.25663/brainlife.app.442 via the “Execute” tab.
 
 Inputs: \
-The two inputs are (i) a collection of estimated masks and (ii) a collection of ground truth masks. If you have bundles in WMC format, you can convert them in the correct datatype by using this App: https://doi.org/10.25663/brainlife.app.142. WARNING: be sure that the two collections contain the exact same bundles, and that are in the same anatomical space.
+The input is a collection of bundle masks (.nii.gz format).
 
 Output: \
-Along with the DSC score, other 5 common scores are returned, specifically: 
-* [Dice Similarity Coefficient](https://en.wikipedia.org/wiki/S%C3%B8rensen%E2%80%93Dice_coefficient) (DSC) 
-* [Jaccard index](https://en.wikipedia.org/wiki/Jaccard_index) (J) 
-* [sensitivity](https://en.wikipedia.org/wiki/Sensitivity_and_specificity) (sens)
-* [True Positives](https://en.wikipedia.org/wiki/False_positives_and_false_negatives) (TP) 
-* [False Positives](https://en.wikipedia.org/wiki/False_positives_and_false_negatives) (FP)
-* [False Negatives](https://en.wikipedia.org/wiki/False_positives_and_false_negatives) (FN)
+The App returns the FD of all the bundle masks given in input.
 
 ### Running Locally (on your machine)
 
@@ -59,8 +53,7 @@ Along with the DSC score, other 5 common scores are returned, specifically:
 
 ```json
 {
-        "seg_est": "./input/estimated_tracts/masks",
-	"seg_true": "./input/true_tracts/masks"
+        "masks": "./input/masks"
 }
 ```
 
@@ -71,10 +64,9 @@ Along with the DSC score, other 5 common scores are returned, specifically:
 ```
 
 ### Output
-The main output of this App is a file called `output_FiberStats.csv`, in which on the columns there are the different scores, and on the rows the different bundles of the collections.
+The main output of this App is a file called `output_FiberStats.csv`, in which is reported the FD of all the bundle masks of the collection.
 
 ### Dependencies
 This App only requires [singularity](https://sylabs.io/singularity/) to run. 
 
-#### MIT Copyright (c) 2020 Bruno Kessler Foundation (FBK)
-
+#### MIT Copyright (c) 2019 Emanuele Olivetti
