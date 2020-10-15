@@ -3,7 +3,7 @@
 
 # app-fractal-dimension
 This App was designed to compute the Fractal Dimension (FD) of bundle masks. In general, the concept of fractal dimension (Mandelbrot et al., 1982) can be used to quantify the degree of irregularity of a 3D shape. This notion has already been applied to the shape of the brain white matter 
-(Zhang et al., 2006) and to characterize multiple sclerosis (Esteban et al., 2007). The FD of a bundle mask can be computed via the box-counting dimension (Falconer et al., 2014}. The box-counting dimension is based on the idea of covering a given shape with boxes of size σ and it quantifies how the number of boxes changes when σ changes, in double-log scale:
+(Zhang et al., 2006) and to characterize multiple sclerosis (Esteban et al., 2007). The FD of a bundle mask can be computed via the box-counting dimension (Falconer et al., 2014). The box-counting dimension is based on the idea of covering a given shape with boxes of size σ and it quantifies how the number of boxes changes when σ changes, in double-log scale:
 
 <img src="https://latex.codecogs.com/gif.latex?\text{FD}_{\text{box}}&space;=&space;-&space;\lim_{\sigma&space;\rightarrow&space;0}\frac{\log&space;\text{count}(\sigma)}{\log&space;\sigma}" title="\text{FD}_{\text{box}} = - \lim_{\sigma \rightarrow 0}\frac{\log \text{count}(\sigma)}{\log \sigma}" />
 
@@ -23,7 +23,7 @@ brainlife.io is publicly funded and for the sustainability of the project it is 
 
 ### Reference
 - https://en.wikipedia.org/wiki/Fractal_dimension
-- https://en.wikipedia.org/wiki/Minkowski%E2%80%93Bouligand_dimension
+- https://en.wikipedia.org/wiki/Minkowski-Bouligand_dimension
 
 ### Citations
 We kindly ask that you cite the following articles when publishing papers and code using this code. 
