@@ -12,7 +12,7 @@ mkdir -p csv
 
 #creating mask name list
 ls $masks > mask_name_list.txt #automatically create mask_name_list
-sed -i '/json/d' tract_name_list.txt #remove json files if any
+sed -i '/json/d' mask_name_list.txt #remove json files if any
 #sed -e s/.nii.gz//g -i tract_name_list.txt #remove suffix .nii.gz
 #sed -e s/_Vol//g -i tract_name_list.txt #remove suffix _Vol if any
 
