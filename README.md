@@ -10,7 +10,10 @@ This App was designed to compute the Fractal Dimension (FD) of bundle masks. In 
 where count(σ) is the number of the necessary boxes. 
 
 ### Authors
-- [Emanuele Olivetti](olivetti@fbk.eu)
+- Emanuele Olivetti (olivetti@fbk.eu)
+
+### Contributors
+ - Giulia Bertò (giulia.berto.4@gmail.com)
 
 ### Funding Acknowledgement
 brainlife.io is publicly funded and for the sustainability of the project it is helpful to Acknowledge the use of the platform. We kindly ask that you acknowledge the funding below in your publications and code reusing this code.
