@@ -10,11 +10,11 @@ box_size_max=`jq -r '.box_size_max' config.json`
 
 mkdir -p csv
 
-#creating tract name list
-ls $masks > tract_name_list.txt #automatically create tract_name_list
+#creating mask name list
+ls $masks > mask_name_list.txt #automatically create mask_name_list
 sed -i '/json/d' tract_name_list.txt #remove json files if any
-sed -e s/.nii.gz//g -i tract_name_list.txt #remove suffix .nii.gz
-sed -e s/_Vol//g -i tract_name_list.txt #remove suffix _Vol if any
+#sed -e s/.nii.gz//g -i tract_name_list.txt #remove suffix .nii.gz
+#sed -e s/_Vol//g -i tract_name_list.txt #remove suffix _Vol if any
 
 echo "Computing fractal dimension..."
 singularity exec -e docker://brainlife/dipy:0.16.0 python run.py -masks $masks -box_size_max $box_size_max
